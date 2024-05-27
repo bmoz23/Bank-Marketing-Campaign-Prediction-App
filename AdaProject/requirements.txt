@@ -1,7 +1,0 @@
-streamlit
-joblib
-pandas
-seaborn
-matplotlib.pyplot
-streamlit_lottie
-json
