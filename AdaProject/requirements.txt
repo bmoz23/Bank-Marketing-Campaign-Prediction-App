@@ -1,0 +1,7 @@
+streamlit
+joblib
+pandas
+seaborn
+matplotlib
+streamlit_lottie
+json
