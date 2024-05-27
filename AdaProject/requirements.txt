@@ -53,4 +53,3 @@ zipp==3.19.0
 seaborn
 streamlit_lottie
 matplotlib
-scikit-learn
