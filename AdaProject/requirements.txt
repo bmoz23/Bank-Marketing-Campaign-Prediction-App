@@ -4,5 +4,5 @@ pandas
 seaborn
 matplotlib
 streamlit_lottie
-scikit-learn
-imbalanced-learn
+scikit-learn==1.0.2
+imbalanced-learn==0.8.1
