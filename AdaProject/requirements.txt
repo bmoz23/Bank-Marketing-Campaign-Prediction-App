@@ -9,7 +9,7 @@ colorama==0.4.6
 gitdb==4.0.11
 GitPython==3.1.43
 idna==3.7
-imbalanced-learn==0.10.1
+imbalanced-learn==0.12.2
 imblearn==0.0
 importlib_resources==6.4.0
 Jinja2==3.1.4
@@ -50,7 +50,6 @@ tzdata==2024.1
 urllib3==2.2.1
 watchdog==4.0.1
 zipp==3.19.0
-seaborn
-streamlit_lottie
 matplotlib
-sklearn.compose
+streamlit_lottie
+seaborn
