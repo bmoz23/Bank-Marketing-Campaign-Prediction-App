@@ -17,7 +17,7 @@ data_path = os.path.join(current_dir, 'ADA_DATASET.csv')
 def load_lottie_file(filepath: str):
     with open(filepath, 'r') as f:
         return json.load(f)
-    
+@st.cache(allow_output_mutation=True)
 # Uploading Lottie animation 
 lottie_animation_hello = load_lottie_file(hello_json_path)
 lottie_animation_machine= load_lottie_file(machine_json_path)
@@ -129,11 +129,13 @@ elif page == "Machine Learning Prediction Model":
 
     st.title("Bank Marketing Campaign Prediction")
     col1, col2 = st.columns(2)
-    #with col1:
-    st.write("""For model selection, we first completed steps such as data preprocessing and data cleaning. We then worked with five different models: Logistic Regression, KNN, Decision Tree, Random Forest, and Gradient Boosting. After evaluating the models based on their F1 scores and accuracy scores, we decided to proceed with the Decision Tree model. We incorporated this model into a pipeline that includes all the steps taken and prepared it for use.""")
+    
+    with col1:
+        st.write("""For model selection, we first completed steps such as data preprocessing and data cleaning. We then worked with five different models: Logistic Regression, KNN, Decision Tree, Random Forest, and Gradient Boosting. After evaluating the models based on their F1 scores and accuracy scores, we decided to proceed with the Decision Tree model. We incorporated this model into a pipeline that includes all the steps taken and prepared it for use.""")
 
-    #with col2:
-    #    st_lottie(lottie_animation_machine, height=300, key="coding")
+    with col2:
+        st_lottie(lottie_animation_machine, height=300, key="coding")
+        
     with st.expander("Try the model"):
         st.write("Enter the feature values to make a prediction:")
 
