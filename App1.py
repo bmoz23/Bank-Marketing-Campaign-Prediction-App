@@ -18,14 +18,27 @@ def load_lottie_file(filepath: str):
     with open(filepath, 'r') as f:
         return json.load(f)
         
-# Uploading Lottie animation 
-lottie_animation_hello = load_lottie_file(hello_json_path)
-lottie_animation_machine= load_lottie_file(machine_json_path)
+@st.cache(allow_output_mutation=True)
+def load_model():
+    return joblib.load(model_path)
 
-# Upload trained model 
-# model_filename = 'best_model.pkl'
-model = joblib.load(model_path)
-data= pd.read_csv(data_path)
+@st.cache(allow_output_mutation=True)
+def load_data():
+    return pd.read_csv(data_path)
+
+@st.cache(allow_output_mutation=True)
+def load_animation_h():
+    return load_lottie_file(hello_json_path)
+
+@st.cache(allow_output_mutation=True)
+def load_animation_m():
+    return load_lottie_file(machine_json_path)
+
+# Load animations, model and data
+lottie_animation_hello = load_animation_h()
+lottie_animation_machine = load_animation_m()
+model = load_model()
+data = load_data()
 
 feature_info = """
 ### Feature Information:
