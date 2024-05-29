@@ -82,8 +82,9 @@ if page == "Feedback":
     st.title("We value your feedback!")
 
     contact_form = """
-        <form action="https://formsubmit.co/bmoz1323@gmail.com" method="POST">
+        <form action="https://formsubmit.co/8769fdfb1f25833419f58d7820aafc89" method="POST">
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://bankmarketingprediction.streamlit.app/thanks.html">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Feedback" required></textarea>
