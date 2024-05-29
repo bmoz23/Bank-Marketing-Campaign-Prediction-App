@@ -78,18 +78,18 @@ page = st.sidebar.selectbox("Choose a page", ["Home", "Data Visualization", "Mac
 
 # Feedback Form
 if page == "Feedback":
-    st.sidebar.title("We value your feedback!")
-    name = st.sidebar.text_input("Your Name")
-    email = st.sidebar.text_input("Your Email")
-    feedback = st.sidebar.text_area("Your Feedback")
+    st.title("We value your feedback!")
+    name = st.text_input("Your Name")
+    email = st.text_input("Your Email")
+    feedback = st.text_area("Your Feedback")
 
-    if st.sidebar.button("Submit"):
+    if st.button("Submit"):
         if name and email and feedback:
             with open(os.path.join(current_dir, 'feedback.txt'), 'a') as f:
                 f.write(f"Name: {name}\nEmail: {email}\nFeedback: {feedback}\n{'-'*40}\n")
-            st.sidebar.success("Thank you for your feedback!")
+            st.success("Thank you for your feedback!")
         else:
-            st.sidebar.error("Please fill out all fields.")
+            st.error("Please fill out all fields.")
 
 if page == "Home":
    st.title("Welcome to the Bank Marketing Campaign Prediction App")
