@@ -25,7 +25,7 @@ def load_animation_h():
 
 @st.cache(allow_output_mutation=True)
 def load_animation_m():
-     lottie_animation_machine = load_lottie_file(machine_json_path)
+    lottie_animation_machine = load_lottie_file(machine_json_path)
     return lottie_animation_machine
 
 @st.cache(allow_output_mutation=True)
@@ -37,7 +37,7 @@ def load_data():
     return pd.read_csv(data_path)
 
 # Load animations, model and data
-lottie_animation_hello=load_animation_h() 
+lottie_animation_hello = load_animation_h()
 lottie_animation_machine = load_animation_m()
 model = load_model()
 data = load_data()
