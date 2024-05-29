@@ -82,7 +82,7 @@ if page == "Feedback":
     st.title("We value your feedback!")
 
     contact_form = """
-        <form action="https://formsubmit.co/8769fdfb1f25833419f58d7820aafc89" method="POST">
+        <form action="https://formsubmit.co/8769fdfb1f25833419f58d7820aafc89" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://bankmarketingprediction.streamlit.app/thanks.html">
             <input type="text" name="name" placeholder="Your Name" required>
@@ -90,6 +90,8 @@ if page == "Feedback":
             <textarea name="message" placeholder="Your Feedback" required></textarea>
             <button type="submit">Send</button>
         </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('status').innerHTML = 'Message sent successfully!'; } else { document.getElementById('status').innerHTML = 'Message failed to send. Please try again.'; }"></iframe>
+        <p id="status"></p>
     """
 
     # Contact form HTML code
