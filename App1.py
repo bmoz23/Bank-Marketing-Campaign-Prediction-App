@@ -20,7 +20,8 @@ def load_lottie_file(filepath: str):
         
 @st.cache(allow_output_mutation=True)
 def load_model():
-    return joblib.load(model_path)
+    with st.spinner("Loading model..."):
+        return joblib.load(model_path)
 
 @st.cache(allow_output_mutation=True)
 def load_data():
