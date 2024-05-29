@@ -221,7 +221,7 @@ elif page == "Machine Learning Prediction Model":
         # Prediction button
         if st.button("Predict"):
             prediction = model.predict(input_df)
-            st.write(f"Prediction: {'yes' if prediction[0] == 1 else 'no'}")
+            st.write(f"Prediction: {'Yes' if prediction[0] == 1 else 'No'}")
 
 if __name__ == "__main__":
     st.write("Bank Marketing Campaign Prediction")
